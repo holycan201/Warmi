@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".views.activity.MainActivity">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -67,7 +67,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardHome2"
+                    android:id="@+id/card_ads"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginStart="24dp"
@@ -79,32 +79,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/card_banner">
 
                     <ImageView
-                        android:id="@+id/adsBanner"
+                        android:id="@+id/ads_banner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="centerCrop"
                         app:srcCompat="@drawable/iklan" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/textAdsBanner"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="For Carausel"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardHome3"
+                    android:id="@+id/card_ads2"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:layout_marginStart="24dp"
@@ -113,7 +97,7 @@
                     app:cardCornerRadius="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardHome2">
+                    app:layout_constraintTop_toBottomOf="@+id/card_ads">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -129,55 +113,60 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/card_menu2"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/titleCardHome3">
+                            app:layout_constraintTop_toBottomOf="@+id/title_card_ads2">
 
-                            <androidx.constraintlayout.widget.ConstraintLayout
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
 
                                 <ImageView
-                                    android:id="@+id/img_menu1"
+                                    android:id="@+id/img_menu"
                                     android:layout_width="match_parent"
-                                    android:layout_height="50dp"
+                                    android:layout_height="70dp"
                                     android:scaleType="centerCrop"
-                                    app:layout_constraintBottom_toTopOf="@+id/title_menu1"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
                                     tools:srcCompat="@drawable/mie_nyemek" />
 
-                                <TextView
-                                    android:id="@+id/title_menu1"
-                                    android:layout_width="wrap_content"
+                                <LinearLayout
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="16dp"
-                                    android:text="Mie Nyemek"
-                                    app:layout_constraintBottom_toTopOf="@+id/price_menu1"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/img_menu1" />
+                                    android:layout_marginTop="16dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
 
-                                <TextView
-                                    android:id="@+id/price_menu1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="16dp"
-                                    android:text="Rp.8000"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/title_menu1" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
 
-                                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                                    android:id="@+id/act_btn_menu1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/button_background"
-                                    android:clickable="true"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/price_menu1"
-                                    app:layout_constraintTop_toBottomOf="@+id/title_menu1"
-                                    app:srcCompat="@drawable/plus" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
+                                        <TextView
+                                            android:id="@+id/title_menu"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:text="Mie Nyemek" />
+
+                                        <TextView
+                                            android:id="@+id/price_menu"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:text="Rp.8000" />
+
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:id="@+id/add_btn_menu1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/plus" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 
@@ -191,11 +180,11 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/card_menu1"
-                            app:layout_constraintTop_toBottomOf="@+id/titleCardHome3"
+                            app:layout_constraintTop_toBottomOf="@+id/title_card_ads2"
                             app:layout_constraintVertical_bias="0.538" />
 
                         <TextView
-                            android:id="@+id/titleCardHome3"
+                            android:id="@+id/title_card_ads2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -209,7 +198,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardHome4"
+                    android:id="@+id/card_ads3"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:layout_marginStart="24dp"
@@ -221,7 +210,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardHome3">
+                    app:layout_constraintTop_toBottomOf="@+id/card_ads2">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -237,53 +226,58 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView12">
 
-                            <androidx.constraintlayout.widget.ConstraintLayout
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
 
                                 <ImageView
-                                    android:id="@+id/imgHemat1"
+                                    android:id="@+id/img_hemat1"
                                     android:layout_width="match_parent"
-                                    android:layout_height="50dp"
+                                    android:layout_height="70dp"
                                     android:scaleType="centerCrop"
-                                    app:layout_constraintBottom_toTopOf="@+id/titleHemat1"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    tools:srcCompat="@drawable/mie_nyemek" />
+                                    tools:srcCompat="@drawable/seblak" />
 
-                                <TextView
-                                    android:id="@+id/titleHemat1"
-                                    android:layout_width="wrap_content"
+                                <LinearLayout
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="16dp"
-                                    android:text="Mie Nyemek"
-                                    app:layout_constraintBottom_toTopOf="@+id/priceHemat1"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/imgHemat1" />
+                                    android:layout_marginTop="16dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
 
-                                <TextView
-                                    android:id="@+id/priceHemat1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="16dp"
-                                    android:text="Rp.8000"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/titleHemat1" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
 
-                                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                                    android:id="@+id/actBtnHemat1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/button_background"
-                                    android:clickable="true"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/priceHemat1"
-                                    app:layout_constraintTop_toBottomOf="@+id/titleHemat1"
-                                    app:srcCompat="@drawable/plus" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
+                                        <TextView
+                                            android:id="@+id/title_hemat1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:text="Mie Nyemek" />
+
+                                        <TextView
+                                            android:id="@+id/price_hemat1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="16dp"
+                                            android:text="Rp.8000" />
+
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:id="@+id/add_btn_hemat1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/plus" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
 

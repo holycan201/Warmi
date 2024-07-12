@@ -13,28 +13,40 @@
         android:theme="@style/Theme.Warmi"
         tools:targetApi="31">
         <activity
-            android:name=".CartActivity"
+            android:name=".views.activity.address.CrudAddressActivity"
             android:exported="false" />
         <activity
-            android:name=".PaymentActivity"
+            android:name=".views.activity.product.AddProductActivity"
             android:exported="false" />
         <activity
-            android:name=".CheckoutActivity"
+            android:name=".views.activity.PhoneAuthActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".views.activity.payments.PaymentMethodeActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".views.activity.CartActivity"
             android:exported="false" />
         <activity
-            android:name=".AddressActivity"
+            android:name=".views.activity.payments.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".views.activity.OrderActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".views.activity.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.activity.address.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
